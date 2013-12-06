@@ -16,8 +16,7 @@ limitations under the License.
 
 //////////////// Connect to current host (or localhost) and configure a StatusWidget
 define(["LightstreamerClient"],function(LightstreamerClient) {
-  //var lsClient = new LightstreamerClient("http://push.lightstreamer.com","ROOM");
-  var lsClient = new LightstreamerClient(null,"ROOM");
+  var lsClient = new LightstreamerClient(null,"ROOMBALL");
   lsClient.connect();
 
   return lsClient;
