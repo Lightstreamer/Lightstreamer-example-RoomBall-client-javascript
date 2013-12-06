@@ -33,7 +33,7 @@ define(["./AxisControl"],function(AxisControl) {
   var GO = false;
   var TWO = false;
   
-  var goEvents = ["mousedown","touchstart"];
+  var goEvents = ["mousedown","touchstart","touchenter"];
   var stopEvents = ["mouseup","touchend","touchcancel","touchleave","mouseout"];
   
   function getHandler(that,obj,isOne,isStop) {
