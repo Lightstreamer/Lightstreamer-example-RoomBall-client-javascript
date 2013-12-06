@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<!--
+  LIGHTSTREAMER - www.lightstreamer.com
+  Room Demo
+  
+  Copyright 2013 Weswit s.r.l.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<html style=" ">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <title>Lightstreamer Room-Ball Demo for JavaScript Client</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:800,400' rel='stylesheet' type='text/css'>
+  
+  <!-- JQuery stuff  -->
+  <link type="text/css" href="css/jquery-ui-1.9.2.custom.css" rel="Stylesheet" />
+
+  <script type="text/javascript" src="js/jquery-1.8.3.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script> 
+  <script type="text/javascript" src="js/jquery.qtip-1.0.0-rc3.min.js"></script>
+  
+  <script data-main="js/main" src="js/require.js"></script>
+  <script src="js/lightstreamer.js"></script>
+  <style>
+    .qtip-content {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="https://github.com/Weswit/Lightstreamer-example-RoomCall-client-javascript"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+
+  <!-- <div id="commands" style="text-align: center; display: none; padding-right: 0px; position: absolute; top: 150px; left: 370px;"> -->
+  <div id="commands" style="text-align: center; display: none; padding-right: 0px; position: fixed; top: 15px; left: 0; border: 0; z-index: 5">
+    <div id="buttons" class="highSmall" style="text-align: center;">
+      <table style="margin-left: auto; margin-right: auto;">
+        <tr>
+          <td></td>
+          <td>
+            <div id="up" class="button" style="background-image: url(./images/arrow_up.png); background-repeat: no-repeat; filter:alpha(opacity=60); opacity:.6;">
+            </div>
+          </td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>
+            <div id="left" class="button" style="background-image: url(./images/arrow_left.png); background-repeat: no-repeat; filter:alpha(opacity=60); opacity:.6;">
+            </div>
+          </td>
+          <td></td>
+          <td>
+            <div id="right" class="button" style="background-image: url(./images/arrow_right.png); background-repeat: no-repeat; filter:alpha(opacity=60); opacity:.6;">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <div id="down" class="button" style="background-image: url(./images/arrow_down.png); background-repeat: no-repeat; filter:alpha(opacity=60); opacity:.6;">
+            </div>
+          </td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+    <div id="keyA" class="highbSmall">
+      ... or use your keyboard
+    </div>
+  </div>
+
+  <div id="wrap_m">
+    
+    <!-- nickname edit form -->
+    <div id="loginDiv">
+      <div id="demoTitle" class="highTitle_b">Lightstreamer Room-Ball Demo
+      </div>
+      <form id="loginForm" onSubmit="login.submitNick(); return false;" style="margin: 0px; text-align: center; align: center">
+        <div id="text_1" class="highTitle" >What's your name?</div>
+        <input id="user_nick" type="text" maxlength="15" value="" class="highFeature" disabled />
+        <input id="nick_button" type="submit" value="Let's go!" class="highFeature" style="height: 60px" disabled />
+        <div id="errorDiv" class="highError" > </div>
+      </form>
+    </div>
+    
+    <div id="game_div" style="display:none;"> 
+      
+      <div id="room_d" class="masonry" style="top: 0px; background-color: #f1f1f1;">
+        <div id="Physics" style="position: absolute; left: 400px; z-index: 5">
+          <span id="Physics_txt" class="highbvSmall" style="">This is pure server-side mode</span>
+          <span><img id="Physics_img" src="images/help.png" border="0" height="14px" width="14px" vspace="0" style="vertical-align: bottom;"></span>
+        </div>
+        <div id="room_t" style="position: absolute; top: 505px; left: 15px; width: 975px; z-index: 4; ">
+          <div>
+             <table>
+               <tr>
+                 <td class="highbSmall" style="width: 270px; text-align: left; ">Current downstream bandwidth: </td>
+                 <td><div data-source="lightstreamer" data-grid="band" data-item=1 data-field="currentBandwidth" class="highbSmall" style="text-align: left; min-width: 75px">--</div></td>
+     
+                 <td width="410px" class="highbSmall" style="text-align: right;">Max downstream bandwidth:</td>
+                 <td width="305px">
+                   <div id="bwslider"></div>
+                 </td>
+                 <td width="120px">
+                   <div class="highbSmall" style="text-align: left"><span id="nowBandwidth" style="margin-left: 15px">unlimited</span> kBps</div>
+                 </td>
+                </tr>
+             </table>
+          </div>
+        </div>
+      </div>
+
+      <div id="dialog" title="MoveCmds" >
+        <p class="highSmall">Please use these commands to move your avatar (or use the arrow keys):</p>
+        <div id="switch" class="highSmall">
+          <input id="typeSwitch" class="highFeature" type="checkbox" style="vertical-align:middle; height: 22px; width: 22px"/>
+          <span style="padding-bottom:10px">Use device sensors</span>
+        </div>
+      </div>
+      <div id="bottom" >
+        <table style="width: 1028px;" cellpadding="0px" cellspacing="0px" border="0px">
+          <tr>
+            <td>
+              <div style="float: left; display: block; margin-left: 10px;">
+                <span id="iam" class="iam" style="padding-right: 10px;  text-align: center;" ></span>
+                <label for="user_msg" id="label_in" class="iam" style="color: #ffffff;" >Type your message (max 30 chars) </label>
+                <input id="user_msg" type="text" value="" onkeyup="ssubmit(this.value)" maxlength="30" class="iam" style="color: black; padding-left: 0px; font-size: 18px; width: 315px" onfocus="setFocus();" onblur="unFocus();" />
+                <input id="clear_button" type="submit" onclick="clear_input();"  style="font-size: 18px; height: 30px; text-align: center;" value="Clear" class="highFeature" />
+              </div>
+            </td>
+            <td style="text-align: right;">
+		          <div class="highTitle" style="text-align: right; margin-right: 20px; margin-top: 5px; margin-bottom: 5px;" ><a href="http://www.lightstreamer.com" target="_blank">
+                <img src="images/logo_white.png" height="50px" alt="LIGHTSTREAMER" /></a></div>
+		        </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div id="empty"></div>
+  </div>
+
+</body>
+
+</html>

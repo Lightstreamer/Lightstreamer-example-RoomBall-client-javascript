@@ -1,0 +1,315 @@
+/*
+ * LIGHTSTREAMER - www.lightstreamer.com
+ * Basic Instant Messenger Demo
+ *  Copyright 2013 Weswit Srl
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+ 
+body 
+{
+    margin: 0px;
+}
+
+div#bottom  {
+    position: absolute;
+    /*bottom: 1px;*/
+    margin: 0px;
+    border-top-style: solid;
+    border-width: 0 0 0 0;
+    border-top-color: #999999;
+    padding: 5px 0 0 0;
+    height: 70px;
+    background-color: white;
+    z-index: 3;
+}
+
+#bwslider { 
+    margin: 10px; 
+}
+
+.demoTitle {
+  font-family: Verdana, Arial, Helvetica, Sans-serif;
+  font-size: 9pt;
+  color: #000000;
+  font-weight: bold;
+  text-align: right;
+}
+.messageContainer {
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #0055aa;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+}
+.messagePart1 {
+  font-family: Sans-serif;
+  font-size: 8pt;
+  color: #0080ff;
+}
+.messagePart2 {
+  font-family: Sans-serif;
+  font-size: 9pt;
+  color: #000000;
+}
+.sendTitle {
+  font-family: Sans-serif;
+  font-size: 27pt;
+  color: #000000;
+}
+.buddiesTitle {
+  height: 15px;
+  font-family: Sans-serif;
+  font-size: 9pt;
+  background-color: #b0b0b0;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+.buddiesPanel {
+  width: 150px;
+  height: 700px;
+  overflow: auto;
+  border-style: solid;
+  border-color: #b0b0b0;
+  border-width: 3px;
+  background-color: #ffffff;
+}
+.messagesPanel {
+  width: 450px;
+  height: 700px;
+  overflow: auto;
+  border-style: solid;
+  border-color: #b0b0b0;
+  border-width: 3px;
+  background-color: #ffffff;
+}
+.buddy {
+  font-family: Sans-serif;
+  font-size: 9pt;
+  color: #101010;
+}
+.item {
+  width: 250px;
+}
+.itemMelight { 	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 7pt; color: #005500; font-weight: bold; background-color: #FF666B; text-align: center; }  
+.itemOtherlight { 	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 7pt; color: #005500; font-weight: bold; background-color: #7FC1FF; text-align: center; }  
+.messages  { 	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 7pt; color: #005500; font-weight: bold; text-align: center; }
+.messages-fresh  { 	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 7pt; color: #005500; background-color: #FFF056; font-weight: bold; text-align: center; }  
+.highTitle { font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #555555; font-size: 60px; font-weight: 800; line-height: 60px; text-align: center; margin-bottom: 40px;  margin-top: 80px;}
+.highTitle_b{ font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #aaaaaa; font-size: 36px; font-weight: 800; line-height: 36px; text-align: center; margin-bottom: 40px;  margin-top: 80px;}
+.highFeature { font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #555555; font-size: 40px; font-weight: 400; text-align: left; }
+.highError { font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #aa0000; line-height: 20px; font-size: 28px; font-weight: 400; text-align: center; margin-top: 50px; }
+.highMessage { font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #999999; line-height: 20px; font-size: 28px; font-weight: 400; text-align: center; margin-top: 50px; margin-bottom: 50px; }
+.roundbox2 { border-radius: 15px; width: 120px; height: 80px; border-style: solid; border-width: 0px; border-color: #C3DCE5; box-shadow: -4px 0px 4px -3px #94A5AA, 4px 0px 4px -3px #94A5AA }
+.highSmall { font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #999999; line-height: 14px; font-size: 14px; font-weight: 400; text-align: center; }
+.highbSmall { font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #999999; line-height: 18px; font-size: 16px; font-weight: 400; text-align: center; }
+.highbvSmall { font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #999999; line-height: 16px; font-size: 16px; font-weight: 400; text-align: center; vertical-align: bottom; }
+.highvSmall { 
+  font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; 
+  color: #555555; 
+  font-size: 14px; 
+  font-weight: 700; 
+  text-align: center; 
+  position: absolute; 
+  top: -20px; 
+  left: -65px;
+  width: 150px;
+  text-align: center;
+}
+.highvvSmall { font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #999999; font-size: 9px; font-weight: 700; text-align: center;  }
+.highvvSmall-hot { font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #aa0000; font-size: 9px; font-weight: 700; text-align: center;  }
+.iam { font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #ffffff; line-height: 18px; font-size: 18px; font-weight: 400; text-align: left; }
+.divBall {
+	position: absolute;
+ 
+}
+.divPerson {
+  position: absolute;
+}
+.wrap {
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  top: 50%; 
+  margin-left: -300px; /* Half of the total width */
+  margin-top: -200px; /* Half of the total height */
+}
+#wrap_m {
+  width: 1028px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.nicks {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 15px; 
+  margin: 3px; 
+  color: #ffffff;
+  text-align: center;
+}
+.usragent {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 3px; 
+  color: #D3FFFA;
+  text-align: center;
+}
+.msgs {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 3px; 
+  color: #ffffff;
+  text-align: center;
+}
+
+.msgs-hot {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 3px; 
+  color: #FCFF59;
+  text-align: center;
+}
+
+.masonry {
+  max-height: 100%;
+  margin-top: 12px;
+  
+  min-width: 1000px; 
+  border-style: solid; 
+  border-color: transparent; 
+  border-width: 14px; 
+  position: relative;
+}
+
+.masonry .item {
+  width:  280px;
+  height: 80px;
+  float: left;
+  font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif;
+  line-height: 20px;
+  font-size: 28px;
+  font-weight: 400;
+  background: #D26;
+  /*border: 2px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);*/
+  border-radius: 10px;
+  border-style: solid; 
+  border-width: 0px; 
+  border-color: #C3DCE5; 
+  box-shadow: 8px 8px 9px -4px #94A5AA;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+
+.item:hover {
+  border: 2px solid #333;
+  border-color: red;
+  cursor: pointer;
+}
+
+.button {
+	border: 2px solid #999;
+	background-color: white;
+	color: #999;
+	width: 48px;
+	height: 48px;
+	border-radius: 6px;
+	position: relative;
+	
+	-webkit-user-select: none; 
+  -khtml-user-select: none;   
+  -moz-user-select: none; 
+  -o-user-select: none;    
+  user-select: none;
+}
+.button:active {
+  background-color: #999;
+  color: white;
+}
+.disabledButton {
+	background-color: black;
+	
+}
+.disabledButton:active {
+  background-color: black; 
+  color: #999;
+}
+
+/* thx to http://nicolasgallagher.com/ */
+
+.triangle-border {
+  position:absolute;
+  border:2px solid;
+  min-width: 60px;
+  
+  padding-right: 4px;
+  padding-left: 4px;
+  color:#333;
+  background:#fff;
+  -webkit-border-radius:5px 10px 10px 5px;
+  -moz-border-radius:5px 10px 10px 5px;
+  border-radius:5px 10px 10px 5px;
+  left: 22px;
+  top:-3px;
+  
+  font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif;
+  color: #777777;
+  font-size: 12px;
+  font-weight: 400;
+  text-align: center;
+
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  
+}
+/** top right bottom left**/
+.triangle-border:before {
+  content:"";
+  position:absolute;
+  border-style:solid;
+  top:0px; /* controls vertical position */
+  bottom:auto;
+  left:-10px; /* value = - border-left-width - border-right-width */
+  border-width:5px 10px 5px 0;
+  
+ /* NOTE: inherit on a pseudo-element does not work on most browsers (actually works on chome only)
+      unfortunately I can't modify the :before element's styles via JavaScript to change its color and thus we need one class per each color :( 
+  We generate the CSS classes via JavaScript though (see Player.js)     
+ */
+  /*border-color:transparent inherit;*/
+}
+
+/* creates the smaller  triangle */
+.triangle-border:after {
+  content:"";
+  position:absolute;
+  border-style:solid;
+  top:2px; /* value = (:before top) + (:before border-top) - (:after border-top) */ 
+  bottom:auto;
+  left:-7px; /* value = - border-left-width - border-right-width */
+  border-width:3px 7px 3px 0;
+  border-color:transparent #fff;
+}
+
+
+
