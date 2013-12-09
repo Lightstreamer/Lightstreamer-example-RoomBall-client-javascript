@@ -19,7 +19,7 @@
     limitations under the License.
 -->
 
-<html style=" ">
+<html>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
@@ -46,9 +46,10 @@
 </head>
 
 <body>
-  <a href="https://github.com/Weswit/Lightstreamer-example-RoomBall-client-javascript"><img style="position: absolute; top: 0; right: 0; border: 0; z-index:1" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
-
-  <!-- <div id="commands" style="text-align: center; display: none; padding-right: 0px; position: absolute; top: 150px; left: 370px;"> -->
+  <div id="GitHubRibbon">
+    <a href="https://github.com/Weswit/Lightstreamer-example-RoomBall-client-javascript"><img style="position: fixed; filter:alpha(opacity=60); opacity:.6; top: 0; right: 0; border: 0; z-index:1" src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" alt="Fork me on GitHub"></a>
+  </div>
+  
   <div id="commands" style="text-align: center; display: none; padding-right: 0px; position: fixed; top: 15px; left: 0; border: 0; z-index: 5">
     <div id="buttons" class="highSmall" style="text-align: center;">
       <table style="margin-left: auto; margin-right: auto;">
@@ -141,7 +142,7 @@
               <div style="float: left; display: block; margin-left: 10px;">
                 <span id="iam" class="iam" style="padding-right: 10px;  text-align: center;" ></span>
                 <label for="user_msg" id="label_in" class="iam" style="color: #ffffff;" >Type your message (max 30 chars) </label>
-                <input id="user_msg" type="text" value="" onkeyup="ssubmit(this.value)" maxlength="30" class="iam" style="color: black; padding-left: 0px; font-size: 18px; width: 315px" onfocus="setFocus();" onblur="unFocus();" />
+                <input id="user_msg" type="text" value="" onkeyup="ssubmit(this.value)" maxlength="30" class="highbSmall" style="padding-left: 0px; font-size: 18px; width: 315px; text-align: left;" onfocus="setFocus();" onblur="unFocus();" />
                 <input id="clear_button" type="submit" onclick="clear_input();"  style="font-size: 18px; height: 30px; text-align: center;" value="Clear" class="highFeature" />
               </div>
             </td>

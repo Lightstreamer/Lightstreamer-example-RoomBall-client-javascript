@@ -20,7 +20,7 @@ var buttons = null;
 
 // ###### From index_master.html
 
-var maxBandVal = 100.5;
+var maxBandVal = 33.5;
 
 function updateBWInd(v) {
   if (v == maxBandVal) {
@@ -40,9 +40,9 @@ $(document).ready(function() {
   $("#bwslider").slider({
     animate: true,
     min: 0.5,
-    max: 100.5,
+    max: 33.5,
     step: 1, 
-    values: [ 100.5 ],
+    values: [ 33.5 ],
     slide: function( event, ui ) {
       updateBWInd(ui.value);
     },
@@ -154,6 +154,7 @@ require(["login","Buddies","lsClient","DisplaySwitch","Subscription","StaticGrid
       
       onLogin: function(newNick,changed) {
         myNick = newNick;
+        // document.getElementById("wrap_m").style.width = "1028px";
         inOutSwitch.show("game_div");
         
         if (!watcher) {

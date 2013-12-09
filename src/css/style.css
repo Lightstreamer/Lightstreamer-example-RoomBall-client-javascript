@@ -133,6 +133,7 @@ div#bottom  {
 }
 .divPerson {
   position: absolute;
+  z-index: 2;
 }
 .wrap {
   width: 600px;
@@ -146,8 +147,9 @@ div#bottom  {
   margin-top: -200px; /* Half of the total height */
 }
 #wrap_m {
+  /* width: 1028px;
+  height: 100%; */
   width: 1028px;
-  height: 100%;
   margin: 0 auto;
 }
 
