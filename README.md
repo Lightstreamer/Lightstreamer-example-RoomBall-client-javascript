@@ -1,6 +1,6 @@
 # Lightstreamer - Room-Ball Demo - HTML Client #
 
-This project includes a web client front-end example for the [Lightstreamer - Room-Ball Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java).
+This project includes a web client front-end example for the [Lightstreamer - Room-Ball Demo - Java SE Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java).
 
 ## Room-Ball Demo ##
 
