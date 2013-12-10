@@ -20,7 +20,7 @@ var buttons = null;
 
 // ###### From index_master.html
 
-var maxBandVal = 33.5;
+var maxBandVal = 25.25;
 
 function updateBWInd(v) {
   if (v == maxBandVal) {
@@ -29,20 +29,20 @@ function updateBWInd(v) {
   }
 
   var txt = v.toString();
-  if (txt.indexOf(".5") <= -1) {
+  /*if (txt.indexOf(".5") <= -1) {
     document.getElementById("nowBandwidth").innerHTML = txt + ".0";
-  } else {
+  } else {*/
     document.getElementById("nowBandwidth").innerHTML = v;
-  }
+  //}
 }
 
 $(document).ready(function() {
   $("#bwslider").slider({
     animate: true,
-    min: 0.5,
-    max: 33.5,
-    step: 1, 
-    values: [ 33.5 ],
+    min: 0.25,
+    max: 25.25,
+    step: .25, 
+    values: [ 25.25 ],
     slide: function( event, ui ) {
       updateBWInd(ui.value);
     },
@@ -96,7 +96,6 @@ $(document).ready(function() {
   });
   
 });
-
   
 require(["login","Buddies","lsClient","DisplaySwitch","Subscription","StaticGrid","Orientation","KeyPad","OrientationButtonsSwitch","Buttons"], 
     function(login,Buddies,lsClient,DisplaySwitch,Subscription,StaticGrid,Orientation,KeyPad,OrientationButtonsSwitch,Buttons) {
@@ -280,4 +279,13 @@ function clear_input() {
   document.getElementById("user_msg").value = "";
   ssubmit("");
 }
+
+function mOver(obj) {
+  obj.style.zIndex="4";
+}
+
+function mOut(obj) {
+  obj.style.zIndex="1";
+}
+
 

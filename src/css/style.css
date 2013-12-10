@@ -1,6 +1,6 @@
 /*
  * LIGHTSTREAMER - www.lightstreamer.com
- * Basic Instant Messenger Demo
+ * Room-Ball Demo
  *  Copyright 2013 Weswit Srl
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,6 +15,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 div#bottom  {
     position: absolute;
@@ -126,7 +134,7 @@ div#bottom  {
 }
 .highvvSmall { font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #999999; font-size: 9px; font-weight: 700; text-align: center;  }
 .highvvSmall-hot { font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #aa0000; font-size: 9px; font-weight: 700; text-align: center;  }
-.iam { font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #ffffff; line-height: 18px; font-size: 18px; font-weight: 400; text-align: left; }
+.iam { font-family: 'Roboto Condensed',Arial,Helvetica,sans-serif; color: #ffffff; line-height: 16px; font-size: 16px; font-weight: 400; text-align: left; }
 .divBall {
 	position: absolute;
  
@@ -231,7 +239,8 @@ div#bottom  {
 	border-radius: 6px;
 	position: relative;
 	
-	-webkit-user-select: none; 
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; 
   -khtml-user-select: none;   
   -moz-user-select: none; 
   -o-user-select: none;    

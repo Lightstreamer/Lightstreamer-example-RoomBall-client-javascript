@@ -82,7 +82,7 @@
         </tr>
       </table>
     </div>
-    <div id="keyA" class="highbSmall">
+    <div id="keyA" class="highbSmall" style=" text-shadow: 0 2px 0 #fff;" >
       ... or use your keyboard
     </div>
   </div>
@@ -108,19 +108,19 @@
           <span id="Physics_txt" class="highbvSmall" style="">This is pure server-side mode</span>
           <span><img id="Physics_img" src="images/help.png" border="0" height="14px" width="14px" vspace="0" style="vertical-align: bottom;"></span>
         </div>
-        <div id="room_t" style="position: absolute; top: 505px; left: 15px; width: 975px; z-index: 4; ">
+        <div id="room_t" style="position: absolute; top: 505px; left: 15px; width: 975px; z-index: 1;" onmouseover="mOver(this);" onmouseout="mOut(this);" >
           <div>
              <table>
                <tr>
-                 <td class="highbSmall" style="width: 270px; text-align: left; ">Current downstream bandwidth: </td>
-                 <td><div data-source="lightstreamer" data-grid="band" data-item=1 data-field="currentBandwidth" class="highbSmall" style="text-align: left; min-width: 75px">--</div></td>
+                 <td class="highbSmall" style="width: 270px; text-align: left;  ">Current downstream bandwidth: </td>
+                 <td><div data-source="lightstreamer" data-grid="band" data-item=1 data-field="currentBandwidth" class="highbSmall" style="text-align: left; min-width: 75px;" >--</div></td>
      
                  <td width="410px" class="highbSmall" style="text-align: right;">Max downstream bandwidth:</td>
-                 <td width="305px">
+                 <td width="305px" >
                    <div id="bwslider"></div>
                  </td>
                  <td width="120px">
-                   <div class="highbSmall" style="text-align: left"><span id="nowBandwidth" style="margin-left: 15px">unlimited</span> kBps</div>
+                   <div class="highbSmall" style="text-align: left;"><span id="nowBandwidth" style="margin-left: 15px">unlimited</span> kBps</div>
                  </td>
                 </tr>
              </table>
@@ -142,8 +142,8 @@
               <div style="float: left; display: block; margin-left: 10px;">
                 <span id="iam" class="iam" style="padding-right: 10px;  text-align: center;" ></span>
                 <label for="user_msg" id="label_in" class="iam" style="color: #ffffff;" >Type your message (max 30 chars) </label>
-                <input id="user_msg" type="text" value="" onkeyup="ssubmit(this.value)" maxlength="30" class="highbSmall" style="padding-left: 0px; font-size: 18px; width: 315px; text-align: left;" onfocus="setFocus();" onblur="unFocus();" />
-                <input id="clear_button" type="submit" onclick="clear_input();"  style="font-size: 18px; height: 30px; text-align: center;" value="Clear" class="highFeature" />
+                <input id="user_msg" type="text" value="" onkeyup="ssubmit(this.value)" maxlength="30" class="highbSmall" style="padding-left: 0px; font-size: 16px; width: 255px; text-align: left;" onfocus="setFocus();" onblur="unFocus();" />
+                <input id="clear_button" type="submit" onclick="clear_input();"  style="font-size: 16px; height: 30px; text-align: center;" value="Clear" class="highFeature" />
               </div>
             </td>
             <td style="text-align: right;">
