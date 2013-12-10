@@ -282,10 +282,16 @@ function clear_input() {
 
 function mOver(obj) {
   obj.style.zIndex="4";
+  obj.style.backgroundColor="#f1f1f1";
+  obj.style.filter = "alpha(opacity=85)";
+  obj.style.opacity = ".85";
 }
 
 function mOut(obj) {
   obj.style.zIndex="1";
+  obj.style.backgroundColor="";
+  obj.style.filter = "";
+  obj.style.opacity = "";
 }
 
 
