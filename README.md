@@ -1,6 +1,6 @@
-# Lightstreamer Room-Ball Demo for JavaScript Client #
+# Lightstreamer - Room-Ball Demo - HTML Client #
 
-This project includes a web client front-end example for the [Lightstreamer Room-Ball Demo Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java).
+This project includes a web client front-end example for the [Lightstreamer - Room-Ball Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java).
 
 ## Room-Ball Demo ##
 
@@ -41,16 +41,16 @@ The demo are now ready to be launched.
 
 ## Lightstreamer Adapters needed by this demo client ##
 
-* [Lightstreamer Room-Ball Demo Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java)
-* [Lightstreamer Reusable Metadata Adapter in Java](https://github.com/Weswit/Lightstreamer-example-ReusableMetadata-adapter-java)
+* [Lightstreamer - Room-Ball Demo - Java SE Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java)
+* [Lightstreamer - Reusable Metadata Adapters - Java SE Adapter](https://github.com/Weswit/Lightstreamer-example-ReusableMetadata-adapter-java)
 
 ## Similar demo clients that may interest you ##
 
-* [Lightstreamer Chat-Tile Demo for JavaScript Client](https://github.com/Weswit/Lightstreamer-example-ChatTile-client-javascript)
-* [Lightstreamer Chat Demo for JavaScript Client](https://github.com/Weswit/Lightstreamer-example-Chat-client-javascript)
-* [Lightstreamer Round-Trip Demo for JavaScript Client](https://github.com/Weswit/Lightstreamer-example-RoundTrip-client-javascript)
-* [Lightstreamer Messenger Demo for JavaScript Client](https://github.com/Weswit/Lightstreamer-example-Messenger-client-javascript)
-* [Lightstreamer 3D World Demo Client for JavaScript](https://github.com/Weswit/Lightstreamer-example-3DWorld-client-javascript)
+* [Lightstreamer - Chat-Tile Demo - JQuery Client](https://github.com/Weswit/Lightstreamer-example-ChatTile-client-javascript)
+* [Lightstreamer - Chat Demo - HTML Client](https://github.com/Weswit/Lightstreamer-example-Chat-client-javascript)
+* [Lightstreamer - Round-Trip Demo - HTML Client](https://github.com/Weswit/Lightstreamer-example-RoundTrip-client-javascript)
+* [Lightstreamer - Basic Messenger Demo - HTML Client](https://github.com/Weswit/Lightstreamer-example-Messenger-client-javascript)
+* [Lightstreamer - 3D World Demo - Three.js Client](https://github.com/Weswit/Lightstreamer-example-3DWorld-client-javascript)
 
 # Lightstreamer Compatibility Notes #
 
