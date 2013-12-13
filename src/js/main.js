@@ -78,21 +78,9 @@ $(document).ready(function() {
   }
   
   $( "#Physics" ).qtip({
-    content: "Pure Server-side Mode<br>- Physics runs on server side only<br>- User commands are streamed from clients to server<br>- Position updates are streamed from server to clients<br>- Clients are pure renderer (no feedback, no prediction, no interpolation)<br><br>See <a href='http://www.lightstreamer.com' target='_blank'>this slide</a> deck for more details.",
+    content: "Pure Server-side Mode<br>- Physics runs on server side only<br>- User commands are streamed from clients to server<br>- Position updates are streamed from server to clients<br>- Clients are pure renderer (no feedback, no prediction, no interpolation)<br><br>See <a href='http://www.slideshare.net/alinone/slides-html5-devconf-20131022' target='_blank'>this slide</a> deck for more details.",
     position: { corner: { target: 'bottomMiddle', tooltip: 'topLeft' } }, style: 'helpstyle', show: { effect: { type: 'fade', length: 600 } },
     hide: { delay: 1000 }
-  });
-            
-  $(function() {
-    $( "#dialog" ).dialog({
-      autoOpen: false,
-      title: "Commands",
-      dialogClass: "highbvSmall",
-      position: {  my: "left-110", at: "left-110", of: "#room_d" },
-      height: 295,
-      width: 165,
-      
-      });
   });
   
   $.fn.nodoubletapzoom = function() {
@@ -194,8 +182,6 @@ require(["login","Buddies","lsClient","DisplaySwitch","Subscription","StaticGrid
         
         buddies.positionBuddies();
         
-        // $( "#dialog" ).dialog( "open" );
-        
         var enableAccelerometer = false;
         
         if (buttons == null ) {
@@ -208,7 +194,6 @@ require(["login","Buddies","lsClient","DisplaySwitch","Subscription","StaticGrid
           // enableAccelerometer = true;
           document.getElementById("keyA").style.display = "none" ;
         }
-        document.getElementById("typeSwitch").checked = enableAccelerometer;
         var controlsSwitch = new OrientationButtonsSwitch(Orientation,buttons,enableAccelerometer);
         
         function addEvent(evnt, obj, handler){ 
@@ -218,12 +203,6 @@ require(["login","Buddies","lsClient","DisplaySwitch","Subscription","StaticGrid
             obj.attachEvent("on"+evnt, handler);
           }
         }
-        addEvent("click", typeSwitch, function() {
-          var val = document.getElementById("typeSwitch").checked;
-          controlsSwitch.switchTo(val);
-
-          buttonsSwitch.show(val?"empty":"buttons");
-        });
         
         if (!watcher) {
           commandsSwitch.show("commands");
@@ -243,7 +222,6 @@ require(["login","Buddies","lsClient","DisplaySwitch","Subscription","StaticGrid
         inOutSwitch.show("loginDiv");
         lsClient.unsubscribe(subBuddies);
         buddies.noBuddies();
-        // $( "#dialog" ).dialog( "close" );
         if(!watcher) {
           buddies.setOwnerNick(null);
           lsClient.unsubscribe(gBandSubs);  
