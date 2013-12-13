@@ -1,6 +1,6 @@
 # Lightstreamer - Room-Ball Demo - HTML Client #
 
-This project includes a web client front-end example for the [Lightstreamer - Room-Ball Demo - Java SE Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java).
+This project includes a web client front-end example for the [Lightstreamer - Room-Ball Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java).
 
 ## Room-Ball Demo ##
 
@@ -41,8 +41,8 @@ The demo are now ready to be launched.
 
 ## Lightstreamer Adapters needed by this demo client ##
 
-* [Lightstreamer - Room-Ball Demo - Java SE Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java)
-* [Lightstreamer - Reusable Metadata Adapters - Java SE Adapter](https://github.com/Weswit/Lightstreamer-example-ReusableMetadata-adapter-java)
+* [Lightstreamer - Room-Ball Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java)
+* [Lightstreamer - Reusable Metadata Adapters - Java Adapter](https://github.com/Weswit/Lightstreamer-example-ReusableMetadata-adapter-java)
 
 ## Similar demo clients that may interest you ##
 
