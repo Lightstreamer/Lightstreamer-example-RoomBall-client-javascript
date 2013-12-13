@@ -104,8 +104,8 @@
     <div id="game_div" style="display:none;"> 
       
       <div id="room_d" class="masonry" style="top: 0px; background-color: #f1f1f1;">
-        <div id="Physics" style="position: absolute; left: 400px; z-index: 5">
-          <span id="Physics_txt" class="highbvSmall" onmouseover="mOver(this);" onmouseout="mOut(this);" >This is pure server-side mode</span>
+        <div id="Physics" style="position: absolute; left: 400px; z-index: 1" onmouseover="mOver(this);" onmouseout="mOut(this);" >
+          <span id="Physics_txt" class="highbvSmall" >This is pure server-side mode</span>
           <span><img id="Physics_img" src="images/help.png" border="0" height="14px" width="14px" vspace="0" style="vertical-align: bottom;"></span>
         </div>
         <div id="room_t" style="position: absolute; top: 505px; left: 15px; width: 975px; z-index: 1;" onmouseover="mOver(this);" onmouseout="mOut(this);" >
@@ -128,13 +128,6 @@
         </div>
       </div>
 
-      <div id="dialog" title="MoveCmds" >
-        <p class="highSmall">Please use these commands to move your avatar (or use the arrow keys):</p>
-        <div id="switch" class="highSmall">
-          <input id="typeSwitch" class="highFeature" type="checkbox" style="vertical-align:middle; height: 22px; width: 22px"/>
-          <span style="padding-bottom:10px">Use device sensors</span>
-        </div>
-      </div>
       <div id="bottom" >
         <table style="width: 1028px;" cellpadding="0px" cellspacing="0px" border="0px">
           <tr>
