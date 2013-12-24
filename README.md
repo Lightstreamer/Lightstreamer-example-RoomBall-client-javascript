@@ -1,5 +1,7 @@
 # Lightstreamer - Room-Ball Demo - HTML Client #
 
+<!-- START DESCRIPTION lightstreamer-example-roomball-client-javascript -->
+
 This project includes a web client front-end example for the [Lightstreamer - Room-Ball Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java).
 
 ## Room-Ball Demo ##
@@ -15,6 +17,7 @@ The demo includes the following client-side technologies:
 * A [Subscription](http://www.lightstreamer.com/docs/client_javascript_uni_api/Subscription.html) containing 1 item, subscribed to in <b>COMMAND</b> mode.
 * The user messages are sent to the Lightstreamer Server using the [LightstreamerClient.sendMessage](http://www.lightstreamer.com/docs/client_javascript_uni_api/LightstreamerClient.html#sendMessage) utility.
 
+<!-- END DESCRIPTION lightstreamer-example-roomball-client-javascript -->
 # Deploy #
 
 Before you can run the demo some dependencies need to be solved:
@@ -41,8 +44,11 @@ The demo are now ready to be launched.
 
 ## Lightstreamer Adapters needed by this demo client ##
 
+<!-- START RELATED_ENTRIES -->
 * [Lightstreamer - Room-Ball Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java)
 * [Lightstreamer - Reusable Metadata Adapters - Java Adapter](https://github.com/Weswit/Lightstreamer-example-ReusableMetadata-adapter-java)
+
+<!-- END RELATED_ENTRIES -->
 
 ## Similar demo clients that may interest you ##
 
