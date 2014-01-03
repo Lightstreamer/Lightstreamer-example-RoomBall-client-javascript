@@ -13,7 +13,7 @@ Once logged in, the user can start move his or her avatar in the room and exchan
 User messages are broadcasted as you type, character by character, to all other users.<br>
 The red ball is a passive object that you can push in different directions with your avatar.<br>
 
-The demo includes the following client-side technologies:
+The demo includes the following client-side functionalities:
 * A [Subscription](http://www.lightstreamer.com/docs/client_javascript_uni_api/Subscription.html) containing 1 item, subscribed to in <b>COMMAND</b> mode.
 * The user messages are sent to the Lightstreamer Server using the [LightstreamerClient.sendMessage](http://www.lightstreamer.com/docs/client_javascript_uni_api/LightstreamerClient.html#sendMessage) utility.
 
