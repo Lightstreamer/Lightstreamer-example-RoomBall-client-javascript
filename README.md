@@ -6,7 +6,8 @@ This project includes a web client front-end example for the [Lightstreamer - Ro
 
 ## Room-Ball Demo ##
 
-![screenshot](screen_demo.png) [An online demonstration is hosted on our servers](http://demos.lightstreamer.com/RoomBallDemo)
+[![screenshot](screen_demo.png)](http://demos.lightstreamer.com/RoomBallDemo)
+An online demonstration is hosted on our servers at:[http://demos.lightstreamer.com/RoomBallDemo](http://demos.lightstreamer.com/RoomBallDemo)
 
 This <b>Room-Ball Demo</b> implements a simple gaming/collaborative application fed in real time via a Lightstreamer server.<br>
 Once logged in, the user can start move his or her avatar in the room and exchange messages with every other user present in the demo. For each user is created an avatar of a specific background color, on top of which the nickname chosen by the user is displayed and the balloon with the last typed message appears to the right.<br>
@@ -42,7 +43,7 @@ The demo are now ready to be launched.
 
 # See Also #
 
-## Lightstreamer Adapters needed by this demo client ##
+## Lightstreamer Adapters Needed by This Demo Client ##
 
 <!-- START RELATED_ENTRIES -->
 * [Lightstreamer - Room-Ball Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java)
@@ -50,7 +51,7 @@ The demo are now ready to be launched.
 
 <!-- END RELATED_ENTRIES -->
 
-## Similar demo clients that may interest you ##
+## Related Projects ##
 
 * [Lightstreamer - Chat-Tile Demo - JQuery Client](https://github.com/Weswit/Lightstreamer-example-ChatTile-client-javascript)
 * [Lightstreamer - Chat Demo - HTML Client](https://github.com/Weswit/Lightstreamer-example-Chat-client-javascript)
