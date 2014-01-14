@@ -6,7 +6,7 @@ This project includes a web client front-end example for the [Lightstreamer - Ro
 
 ## Room-Ball Demo ##
 
-[![screenshot](screen_demo.png)](http://demos.lightstreamer.com/RoomBallDemo)
+[![screenshot](screen_demo_large.png)](http://demos.lightstreamer.com/RoomBallDemo)<br>
 An online demonstration is hosted on our servers at:[http://demos.lightstreamer.com/RoomBallDemo](http://demos.lightstreamer.com/RoomBallDemo)
 
 This <b>Room-Ball Demo</b> implements a simple gaming/collaborative application fed in real time via a Lightstreamer server.<br>
