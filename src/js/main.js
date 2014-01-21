@@ -78,7 +78,7 @@ $(document).ready(function() {
   }
   
   $( "#Physics" ).qtip({
-    content: "Pure Server-side Mode<br>- Physics runs on server side only<br>- User commands are streamed from clients to server<br>- Position updates are streamed from server to clients<br>- Clients are pure renderer (no feedback, no prediction, no interpolation)<br><br>See <a href='http://www.slideshare.net/alinone/slides-html5-devconf-20131022' target='_blank'>this slide</a> deck for more details.",
+    content: "Pure Server-side Mode<br>- Physics runs on server side only<br>- User commands are streamed from clients to server<br>- Position updates are streamed from server to clients<br>- Clients are pure renderers (no feedback, no prediction, no interpolation)<br><br>See <a href='http://www.slideshare.net/alinone/slides-html5-devconf-20131022' target='_blank'>this slide</a> deck for more details.",
     position: { corner: { target: 'bottomMiddle', tooltip: 'topLeft' } }, style: 'helpstyle', show: { effect: { type: 'fade', length: 600 } },
     hide: { delay: 1000 }
   });
