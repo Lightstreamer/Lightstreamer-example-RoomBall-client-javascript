@@ -102,7 +102,7 @@ $(document).ready(function() {
   
 });
   
-require(["login","Buddies","lsClient","DisplaySwitch","Subscription","StaticGrid","Orientation","KeyPad","OrientationButtonsSwitch","Buttons"], 
+require(["js/login","js/Buddies","js/lsClient","js/DisplaySwitch","Subscription","StaticGrid","js/Orientation","js/KeyPad","js/OrientationButtonsSwitch","js/Buttons"], 
     function(login,Buddies,lsClient,DisplaySwitch,Subscription,StaticGrid,Orientation,KeyPad,OrientationButtonsSwitch,Buttons) {
   
   var inOutSwitch = new DisplaySwitch("loginDiv","game_div");
@@ -240,7 +240,7 @@ require(["login","Buddies","lsClient","DisplaySwitch","Subscription","StaticGrid
   });
 
   var client = null;
-  require(["lsClient","StatusWidget"],function(lsClient,StatusWidget) {   
+  require(["js/lsClient","StatusWidget"],function(lsClient,StatusWidget) {   
   lsClient.addListener(new StatusWidget("left", "15px", false));
   
   client = lsClient;
@@ -259,13 +259,13 @@ function ssubmit(message) {
 }
 
 function setFocus() {
-  require(["./KeyPad"], function(KeyPad) {
+  require(["js/KeyPad"], function(KeyPad) {
     KeyPad.stopListening();
   });
 }
 
 function unFocus() {
-  require(["./KeyPad"], function(KeyPad) {
+  require(["js/KeyPad"], function(KeyPad) {
     KeyPad.startListening();
   });
 }
