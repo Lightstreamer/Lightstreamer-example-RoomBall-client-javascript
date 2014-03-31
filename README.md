@@ -33,13 +33,13 @@ Before you can run the demo some dependencies need to be solved:
 
 You can deploy this demo in order to use the Lightstreamer server as Web server or in any external Web Server you are running. 
 If you choose the former case please note that in the <LS_HOME>/pages/demos/ folder there is a copy of the /src directory of this project, if this is non your case please create the folders <LS_HOME>/pages/demos/RoomBallDemo then copy here the contents of the /src folder of this project.<br>
-The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the same machine. If you need to targeting a different Lightstreamer server please search this line:
+The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the local machine. If you need to targeting a different Lightstreamer server open js/Constants.js file an change the SERVER property accordingly.
 ```js
-var lsClient = new LightstreamerClient(null,"ROOMBALL");
+ SERVER: protocolToUse+"//localhost:8080"
 ```
-in js/lsClient.js file and change it accordingly (replace null with your server URI).<br>
-Anyway the [ROOMBALL](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java) Adapters have to be deployed in your local Lightstreamer server instance.
-The demo are now ready to be launched.
+
+Anyway the [ROOMBALL](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java) Adapters have to be deployed in your Lightstreamer server instance.
+The demo is now ready to be launched.
 
 # See Also #
 
