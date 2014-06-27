@@ -4,10 +4,13 @@
 
 This project includes a web client front-end example for the [Lightstreamer - Room-Ball Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java).
 
-## Room-Ball Demo ##
+## Live Demo
 
 [![screenshot](screen_demo_large_2.png)](http://demos.lightstreamer.com/RoomBallDemo)<br>
-An online demonstration is hosted on our servers at:[http://demos.lightstreamer.com/RoomBallDemo](http://demos.lightstreamer.com/RoomBallDemo)<br>
+
+###[![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/RoomBallDemo)
+
+## Details
 
 This <b>Room-Ball Demo</b> implements a simple gaming/collaborative application fed in real time via a Lightstreamer server.<br>
 Once logged in, the user can start move his or her avatar in the room and exchange messages with every other user present in the demo. For each user is created an avatar of a specific background color, on top of which the nickname chosen by the user is displayed and the balloon with the last typed message appears to the right.<br>
