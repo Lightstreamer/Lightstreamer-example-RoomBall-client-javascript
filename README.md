@@ -20,7 +20,7 @@ The demo includes the following client-side functionalities:
 * The user messages are sent to the Lightstreamer Server using the [LightstreamerClient.sendMessage](http://www.lightstreamer.com/docs/client_javascript_uni_api/LightstreamerClient.html#sendMessage) utility.
 
 <!-- END DESCRIPTION lightstreamer-example-roomball-client-javascript -->
-# Deploy #
+## Install
 
 Before you can run the demo some dependencies need to be solved:
 
@@ -42,9 +42,9 @@ The client demo configuration assumes that Lightstreamer Server, Lightstreamer A
 Anyway the [ROOMBALL](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java) Adapters have to be deployed in your Lightstreamer server instance.
 The demo is now ready to be launched.
 
-# See Also #
+## See Also
 
-## Lightstreamer Adapters Needed by This Demo Client ##
+### Lightstreamer Adapters Needed by This Client
 
 <!-- START RELATED_ENTRIES -->
 * [Lightstreamer - Room-Ball Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java)
@@ -52,7 +52,7 @@ The demo is now ready to be launched.
 
 <!-- END RELATED_ENTRIES -->
 
-## Related Projects ##
+### Related Projects
 
 * [Lightstreamer - Chat-Tile Demo - JQuery Client](https://github.com/Weswit/Lightstreamer-example-ChatTile-client-javascript)
 * [Lightstreamer - Chat Demo - HTML Client](https://github.com/Weswit/Lightstreamer-example-Chat-client-javascript)
@@ -60,6 +60,6 @@ The demo is now ready to be launched.
 * [Lightstreamer - Basic Messenger Demo - HTML Client](https://github.com/Weswit/Lightstreamer-example-Messenger-client-javascript)
 * [Lightstreamer - 3D World Demo - Three.js Client](https://github.com/Weswit/Lightstreamer-example-3DWorld-client-javascript)
 
-# Lightstreamer Compatibility Notes #
+## Lightstreamer Compatibility Notes
 
 - Compatible with Lightstreamer JavaScript Client library version 6.0 or newer.
