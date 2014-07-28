@@ -20,26 +20,24 @@ The demo includes the following client-side functionalities:
 * The user messages are sent to the Lightstreamer Server using the [LightstreamerClient.sendMessage](http://www.lightstreamer.com/docs/client_javascript_uni_api/LightstreamerClient.html#sendMessage) utility.
 
 <!-- END DESCRIPTION lightstreamer-example-roomball-client-javascript -->
+
 ## Install
 
-Before you can run the demo some dependencies need to be solved:
-
--  Get the lightstreamer.js file from the [latest Lightstreamer distribution](http://www.lightstreamer.com/download) 
-   and put it in the src/js folder of the demo. Alternatively you can build a lightstreamer.js file from the 
-   [online generator](http://www.lightstreamer.com/distros/Lightstreamer_Allegro-Presto-Vivace_5_1_1_Colosseo_20130305/Lightstreamer/DOCS-SDKs/sdk_client_javascript/tools/generator.html).
-   In that case be sure to include the LightstreamerClient, Subscription, DynaGrid, and StatusWidget modules and to use the "Use AMD" version.
--  Get the require.js file from [requirejs.org](http://requirejs.org/docs/download.html) and put it in the src/js folder of the demo.
--  Get the jquery.qtip-1.0.0-rc3.min.js file from [qtip download page](http://craigsworks.com/projects/qtip/download/) and put it in the src/js folder of the demo.
--  Please note that the demo uses a jQuery customized theme, included in this project.
+* Note that, as prerequisite, the [Lightstreamer - Room-Ball Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please check out that project and follow the installation instructions provided with it.
+* Launch Lightstreamer Server.
+* Get the `lightstreamer.js` file from the [latest Lightstreamer distribution](http://www.lightstreamer.com/download) and put it in the `src/js` folder of the demo. Alternatively you can build a `lightstreamer.js` file from the 
+[online generator](http://www.lightstreamer.com/latest/Lightstreamer_Allegro-Presto-Vivace_5_1_Colosseo/Lightstreamer/DOCS-SDKs/sdk_client_javascript/tools/generator.html). In that case be sure to include the LightstreamerClient, Subscription, DynaGrid, and StatusWidget modules and to use the "Use AMD" version.
+* Get the `require.js file` from [requirejs.org](http://requirejs.org/docs/download.html) and put it in the `src/js` folder of the demo.
+* Get the `jquery.qtip-1.0.0-rc3.min.js` file from [qtip download page](http://craigsworks.com/projects/qtip/download/) and put it in the `src/js` folder of the demo.
+* Please note that the demo uses a jQuery customized theme, included in this project.
 
 You can deploy this demo in order to use the Lightstreamer server as Web server or in any external Web Server you are running. 
-If you choose the former case please note that in the <LS_HOME>/pages/demos/ folder there is a copy of the /src directory of this project, if this is non your case please create the folders <LS_HOME>/pages/demos/RoomBallDemo then copy here the contents of the /src folder of this project.<br>
-The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the local machine. If you need to targeting a different Lightstreamer server open js/Constants.js file an change the SERVER property accordingly.
+If you choose the former case please note that in the `<LS_HOME>/pages/demos/` folder there is a copy of the `/src` directory of this project, if this is not your case please create the folders `<LS_HOME>/pages/demos/RoomBallDemo` then copy here the contents of the `/src` folder of this project.<br>
+The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the local machine. If you need to targeting a different Lightstreamer server open `js/Constants.js` file an change the SERVER property accordingly.
 ```js
  SERVER: protocolToUse+"//localhost:8080"
 ```
 
-Anyway the [ROOMBALL](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java) Adapters have to be deployed in your Lightstreamer server instance.
 The demo is now ready to be launched.
 
 ## See Also
@@ -62,4 +60,4 @@ The demo is now ready to be launched.
 
 ## Lightstreamer Compatibility Notes
 
-- Compatible with Lightstreamer JavaScript Client library version 6.0 or newer.
+* Compatible with Lightstreamer JavaScript Client library version 6.0 or newer.
