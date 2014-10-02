@@ -10,8 +10,8 @@ This project includes a web client front-end example for the [Lightstreamer - Ro
 
 ## Details
 
-This *Room-Ball Demo* implements a simple gaming/collaborative application fed in real time via a Lightstreamer server.<br>
-Once logged in, the user can start move his or her avatar in the room and exchange messages with every other user present in the demo. For each user is created an avatar of a specific background color, on top of which the nickname chosen by the user is displayed and the balloon with the last typed message appears to the right.<br>
+This *Room-Ball Demo* implements a simple gaming/collaborative application fed in real-time via a Lightstreamer server.<br>
+Once logged in, the user can start moving his or her avatar in the room and exchange messages with every other user present in the demo. For each user, an avatar of a specific background color is created, on top of which the nickname chosen by the user is displayed and the balloon with the last typed message appears to the right.<br>
 User messages are broadcasted as you type, character by character, to all other users.<br>
 The red ball is a passive object that you can push in different directions with your avatar.<br>
 
@@ -27,15 +27,15 @@ If you want to install a version of this demo pointing to your local Lightstream
 
 * Note that, as prerequisite, the [Lightstreamer - Room-Ball Demo - Java Adapter](https://github.com/Weswit/Lightstreamer-example-RoomBall-adapter-java) has to be deployed on your local Lightstreamer Server instance. Please check out that project and follow the installation instructions provided with it.
 * Launch Lightstreamer Server.
-* Get the `lightstreamer.js` file from the [latest Lightstreamer distribution](http://www.lightstreamer.com/download) and put it in the `src/js` folder of the demo. Alternatively you can build a `lightstreamer.js` file from the 
-[online generator](http://www.lightstreamer.com/latest/Lightstreamer_Allegro-Presto-Vivace_5_1_Colosseo/Lightstreamer/DOCS-SDKs/sdk_client_javascript/tools/generator.html). In that case be sure to include the LightstreamerClient, Subscription, DynaGrid, and StatusWidget modules and to use the "Use AMD" version.
+* Get the `lightstreamer.js` file from the [latest Lightstreamer distribution](http://www.lightstreamer.com/download) and put it in the `src/js` folder of the demo. Alternatively, you can build a `lightstreamer.js` file from the 
+[online generator](http://www.lightstreamer.com/latest/Lightstreamer_Allegro-Presto-Vivace_5_1_Colosseo/Lightstreamer/DOCS-SDKs/sdk_client_javascript/tools/generator.html). In that case, be sure to include the LightstreamerClient, Subscription, DynaGrid, and StatusWidget modules and to use the "Use AMD" version.
 * Get the `require.js file` from [requirejs.org](http://requirejs.org/docs/download.html) and put it in the `src/js` folder of the demo.
 * Get the `jquery.qtip-1.0.0-rc3.min.js` file from [qtip download page](http://craigsworks.com/projects/qtip/download/) and put it in the `src/js` folder of the demo.
 * Please note that the demo uses a jQuery customized theme, included in this project.
 
-You can deploy this demo in order to use the Lightstreamer server as Web server or in any external Web Server you are running. 
-If you choose the former case please create the folders `<LS_HOME>/pages/demos/RoomBallDemo` then copy here the contents of the `/src` folder of this project.<br>
-The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters and this client are launched on the local machine. If you need to targeting a different Lightstreamer server open `js/Constants.js` file an change the SERVER property accordingly.
+You can deploy this demo to use the Lightstreamer server as Web server or in any external Web Server you are running. 
+If you choose the former case, please create the folders `<LS_HOME>/pages/demos/RoomBallDemo`, then copy here the contents of the `/src` folder of this project.<br>
+The client demo configuration assumes that Lightstreamer Server, Lightstreamer Adapters, and this client are launched on the local machine. If you need to target a different Lightstreamer server, open `js/Constants.js` file and change the SERVER property accordingly.
 ```js
  SERVER: protocolToUse+"//localhost:8080"
 ```
@@ -46,7 +46,7 @@ The demo is now ready to be launched.
 
 The html applications can be optionally built, to reduce the number and size of the files to be downloaded by the browser, using [r.js](http://requirejs.org/docs/optimization.html). A ready-made configuration file for the build process of the *Room-Ball Demo* is available in the `build_r.js` folder of this project.
 
-The build is configured to use [Google Closure compiler](https://code.google.com/p/closure-compiler/) to minify the files. To run it as is you need to download [rhino](https://developer.mozilla.org/en-US/docs/Rhino) `js.jar` file, `compiler.jar` from the closure compiler project and `r.js` from RequireJS. You also need a [Java Virtual Machine](https://www.java.com/en/download/) installed on your system.
+The build is configured to use [Google Closure compiler](https://code.google.com/p/closure-compiler/) to minify the files. To run it as is, you need to download [rhino](https://developer.mozilla.org/en-US/docs/Rhino) `js.jar` file, `compiler.jar` from the closure compiler project and `r.js` from RequireJS. You also need a [Java Virtual Machine](https://www.java.com/en/download/) installed on your system.
 
 Once ready, from the `build_r.js` folder, run
 
@@ -54,7 +54,7 @@ Once ready, from the `build_r.js` folder, run
 java -cp compiler.jar;js.jar org.mozilla.javascript.tools.shell.Main r.js -o app.build.js
 ```
 
-As an alternative it is possible to customize the build file to use [UglifyJS](https://github.com/mishoo/UglifyJS2); in this case it can be built using [node.js](http://nodejs.org/) instead of using the JVM.
+As an alternative, it is possible to customize the build file to use [UglifyJS](https://github.com/mishoo/UglifyJS2); in this case, it can be built using [node.js](http://nodejs.org/) instead of using the JVM.
 
 ## See Also
 
