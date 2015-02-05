@@ -75,10 +75,9 @@ define(["Subscription","./lsClient"],
     this.posX = null;
     
     this.messageEl = null;
-    this.uaEl = null;
-    
+    this.showBigWords = true;
+
     this.divMsg = null;
-    this.hotTimeout = null;
       
     this.randomNum = getRandomNum();
     this.color = COLORS[this.randomNum-1];
@@ -126,14 +125,11 @@ define(["Subscription","./lsClient"],
         this.divMsg.appendChild(this.messageEl);
         this.avatar.appendChild(this.divMsg);
         var that = this;
-        var canListenr =  addTransitionEnd(this.divMsg,function() {
+        this.showBigWords =  addTransitionEnd(this.divMsg,function() {
           if (that.avatar && that.divMsg.style.fontSize == HOT_FONT_SIZE) {
             that.divMsg.style.fontSize = COLD_FONT_SIZE;
           }
         });
-        if (!canListenr) {
-          this.divMsg.style.fontSize = COLD_FONT_SIZE;
-        }
         
         var div = document.createElement("div");
         div.className = "highvSmall";
@@ -242,7 +238,8 @@ define(["Subscription","./lsClient"],
           }
         }
         
-        if (!isFirst) {
+        if (!isFirst && this.showBigWords) {
+
           if (this.message == "") {
             //without this hack the transition will not execute (at least on chrome)
             var that = this;
@@ -260,15 +257,7 @@ define(["Subscription","./lsClient"],
     updatePlayer: function(info,positionData) {
 
       if (!this.isBall) {
-        var newUa = info.getValue("usrAgnt");
         var newMsg = info.getValue("msg");
-      
-        if (newUa !== null) {
-          if (this.uaEl) {
-            this.uaEl.nodeValue = newUa;
-          }
-        }
-
         this.talk(newMsg, false);
       }
       
@@ -276,12 +265,6 @@ define(["Subscription","./lsClient"],
         this.goTo(info.getValue("posX"),info.getValue("posY"));
       }
       
-    },
-    
-    coldStyle: function() {
-      if (this.div) {
-        this.divMsg.className = "msgs";
-      }
     }
   };
   
