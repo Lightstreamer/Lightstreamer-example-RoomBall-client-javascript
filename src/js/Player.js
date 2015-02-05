@@ -54,17 +54,19 @@ define(["Subscription","./lsClient"],
       obj.addEventListener("webkitTransitionEnd", event,false);
       obj.addEventListener("oTransitionEnd", event,false);
       obj.addEventListener("transitionend", event,false);
+      return true;
     } catch(e) {
-      console.log(e);
+      return false;
     }
   }
   
   var Player = function(info) {
     this.nick = info.getValue("key");
-    this.ua = info.getValue("usrAgnt");
     this.message = info.getValue("msg");
     
     this.isBall = this.nick.indexOf("Ball-") == 0;
+
+    this.appended = false;
     
     this.div = null;
     this.sub = null;
@@ -124,11 +126,14 @@ define(["Subscription","./lsClient"],
         this.divMsg.appendChild(this.messageEl);
         this.avatar.appendChild(this.divMsg);
         var that = this;
-        addTransitionEnd(this.divMsg,function() {
+        var canListenr =  addTransitionEnd(this.divMsg,function() {
           if (that.avatar && that.divMsg.style.fontSize == HOT_FONT_SIZE) {
             that.divMsg.style.fontSize = COLD_FONT_SIZE;
           }
         });
+        if (!canListenr) {
+          this.divMsg.style.fontSize = COLD_FONT_SIZE;
+        }
         
         var div = document.createElement("div");
         div.className = "highvSmall";
@@ -152,7 +157,7 @@ define(["Subscription","./lsClient"],
       this.goTo(this.posX,this.posY);
       
     },
-    goTo: function(x,y,el,fixedW,fixedH) {
+    goTo: function(x,y) {
     
       this.posX = x === null ? this.posX : x;
       this.posY = y === null ? this.posY : y;
@@ -161,13 +166,13 @@ define(["Subscription","./lsClient"],
         return;
       }
       
-      el = el || this.avatar;
+      var el = this.avatar;
       if (!el) {
         return;
       }
       
-      var offsetHeight = fixedH || (el.offsetHeight !== 0 ? el.offsetHeight : (this.isBall ? BALL_HEIGHT : IMG_HEIGHT));
-      var offsetWidth =  fixedW || (el.offsetWidth !== 0 ? el.offsetWidth : (this.isBall ? BALL_WIDTH : IMG_WIDTH)); 
+      var offsetHeight = el.offsetHeight !== 0 ? el.offsetHeight : (this.isBall ? BALL_HEIGHT : IMG_HEIGHT);
+      var offsetWidth =  el.offsetWidth !== 0 ? el.offsetWidth : (this.isBall ? BALL_WIDTH : IMG_WIDTH);
       
       if (this.isBall) {
         el.style.left = (this.posX-(offsetWidth/2))+"px";
@@ -178,12 +183,13 @@ define(["Subscription","./lsClient"],
         el.style.top = (this.posY-offsetHeight)+"px";
       }
       
-      if (!el.parentNode && this.room) {
+      if (!this.appended && this.room) {
         this.room.appendChild(el);
+        this.appended = true;
       }
     
     },
-    removeAvatar: function(msnry) {
+    removeAvatar: function() {
       if (!this.avatar) {
         return;
       } 
@@ -258,7 +264,6 @@ define(["Subscription","./lsClient"],
         var newMsg = info.getValue("msg");
       
         if (newUa !== null) {
-          this.ua = newUa;
           if (this.uaEl) {
             this.uaEl.nodeValue = newUa;
           }
