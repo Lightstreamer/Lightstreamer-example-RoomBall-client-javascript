@@ -55,7 +55,7 @@ $(document).ready(function() {
         }  else {
           v = ui.value * 8;
         }
-        client.connectionOptions.setMaxBandwidth(v);
+        client.connectionOptions.setRequestedMaxBandwidth(v);
       }
     }
   });
