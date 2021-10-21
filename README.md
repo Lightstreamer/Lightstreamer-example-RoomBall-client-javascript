@@ -6,7 +6,7 @@ This project includes a web client front-end example for the [Lightstreamer - Ro
 
 ## Live Demo
 [![screenshot](screen_demo_large_2.png)](http://demos.lightstreamer.com/RoomBallDemo)<br>
-### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](http://demos.lightstreamer.com/RoomBallDemo)
+### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](https://demos.lightstreamer.com/RoomBallDemo/)
 
 ## Details
 
