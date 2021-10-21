@@ -5,7 +5,7 @@
 This project includes a web client front-end example for the [Lightstreamer - Room-Ball Demo - Java Adapter](https://github.com/Lightstreamer/Lightstreamer-example-RoomBall-adapter-java).
 
 ## Live Demo
-[![screenshot](screen_demo_large_2.png)](http://demos.lightstreamer.com/RoomBallDemo)<br>
+[![screenshot](screen_demo_large_2.png)](https://demos.lightstreamer.com/RoomBallDemo/)<br>
 ### [![](http://demos.lightstreamer.com/site/img/play.png) View live demo](https://demos.lightstreamer.com/RoomBallDemo/)
 
 ## Details
