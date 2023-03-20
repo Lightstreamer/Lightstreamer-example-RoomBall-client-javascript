@@ -55,7 +55,7 @@ $(document).ready(function() {
         }  else {
           v = ui.value * 8;
         }
-        client.connectionOptions.setRequestedMaxBandwidth(v);
+        client.connectionOptions.setRequestedMaxBandwidth(String(v));
       }
     }
   });
@@ -152,7 +152,7 @@ require(["js/login","js/Buddies","js/lsClient","js/DisplaySwitch","Subscription"
       bandGrid.updateRow("My_Band_"+myNick, {currentBandwidthKB:"-.-"});
     }
   });
-  gBandSubs.setRequestedMaxFrequency(0.5);
+  gBandSubs.setRequestedMaxFrequency("0.5");
   
   var loginHandler = {
       
