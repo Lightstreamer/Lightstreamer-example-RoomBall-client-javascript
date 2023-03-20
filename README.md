@@ -32,7 +32,6 @@ If you want to install a version of this demo pointing to your local Lightstream
   see the build instructions on the [GitHub page](https://github.com/Lightstreamer/Lightstreamer-lib-client-javascript#building).
   In that case, be sure to include the LightstreamerClient, Subscription, DynaGrid, ConnectionSharing, and StatusWidget modules.
 * Get the `require.js file` from [requirejs.org](http://requirejs.org/docs/download.html) and put it in the `src/js` folder of the demo.
-* Get the `jquery.qtip-1.0.0-rc3.min.js` file from [qtip download page](http://craigsworks.com/projects/qtip/download/) and put it in the `src/js` folder of the demo.
 * Please note that the demo uses a jQuery customized theme, included in this project.
 
 You can deploy this demo to use the Lightstreamer server as Web server or in any external Web Server you are running. 
